@@ -13,7 +13,6 @@ index = pinecone.Index("images")
 
 
 def save_to_db(image, data):
-    print("here")
     images = search.process_batch(image)
 
     _ids = [list(d.keys())[0] for d in data]
