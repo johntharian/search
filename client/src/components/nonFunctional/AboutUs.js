@@ -2,9 +2,7 @@ import React from "react";
 
 import { Box, Container, Typography } from "@mui/material";
 
-import bgimage from "../../assets/bgimage.jpg"
-import bgimage3 from "../../assets/bgimg3.jpg"
-
+import bgimage from "../../assets/bgimage.jpg";
 
 const AboutUs = () => {
   return (
@@ -18,9 +16,6 @@ const AboutUs = () => {
           md: 3.5,
         },
         my: 15,
-        // background: `url(${bgimag}) center center/cover`,e
-        // backgroundColor: "#fff"
-
       }}
     >
       <Box
@@ -33,7 +28,7 @@ const AboutUs = () => {
           justifyContent: "center",
           gap: 4,
           alignItems: "center",
-          backgroundColor: "#fff"
+          backgroundColor: "#fff",
         }}
       >
         <Box sx={{ flex: 1 }}>
@@ -68,7 +63,6 @@ const AboutUs = () => {
             amet ultrices. Class aptent taciti sociosqu ad litora torquent per
             conubia nostra, per inceptos himenaeos.
           </Typography>
-          {/* <SecondaryButton text="Read more" /> */}
         </Box>
         <Box sx={{ flex: 1 }}>
           <img

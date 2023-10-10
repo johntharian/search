@@ -36,10 +36,6 @@ class Code(BaseModel):
 @app.post("/api/data")
 def download_data(code: Code ):
     print(code.access_token)
-    # Implement logic to download data using the access_token
-    # You can use access_token.access_token to access the token value
-
-    # For demonstration purposes, let's return a sample response
     message = index_images(code)
     return {"message": message}
 
@@ -53,5 +49,4 @@ def search_images(query:str,) :
 if __name__ == "__main__":
     import uvicorn
 
-    # Start the FastAPI app with Uvicorn
     uvicorn.run(app, host="127.0.0.1", port=4000)

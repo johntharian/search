@@ -3,23 +3,20 @@ import { Box, Container, Typography } from "@mui/material";
 import NavBar from "./NavBar";
 
 import bgimg from "../../assets/bgimg.jpg";
-import bgimage from "../../assets/bgimage.jpg"
-import bgimage3 from "../../assets/bgimg3.jpg"
+import bgimage3 from "../../assets/bgimg3.jpg";
 
 import BodyContent from "./BodyContent";
 import AboutUs from "./AboutUs";
 import Login from "../Login";
 
-const Body = ({setUser}) => {
+const Body = ({ setUser }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [typedText, setTypedText] = useState("");
   const fullText = "search reimagined ...";
   const [showButton, setShowButton] = useState(false); // Add state for the button
 
-  const [navUser,setNavUser] = useState(null);
-  //  navbar user set it 
-
   useEffect(() => {
+    //  code for displaying "search reimagined ..." letter by letter and after a timeout
     const initialDelay = 1500;
     let currentIndex = 0;
     const typingSpeed = 50;
@@ -107,9 +104,7 @@ const Body = ({setUser}) => {
           >
             {typedText}
           </Typography>
-          {showButton && (
-            <Login setUser={setUser}/>
-          )}
+          {showButton && <Login setUser={setUser} />}
         </Box>
       </Container>
       <Container maxWidth="false" disableGutters>

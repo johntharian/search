@@ -1,34 +1,8 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { AppBar } from "@mui/material";
 import Container from "@mui/material/Container";
 import { Box, Drawer, Typography, IconButton } from "@mui/material";
 import Link from "@mui/material/Link";
-import MenuIcon from "@mui/icons-material/Menu";
-
-// const checkIndexed = async () => {
-//   console.log("Checking");
-//   let userData = {
-//     given_name: "User",
-//     picture: "",
-//   };
-
-//   const user = localStorage.getItem("user");
-
-//   try {
-//     const response = await axios.get("http://localhost:3001/user", {
-//       params: { email: user },
-//     });
-
-//     console.log(response);
-//     userData.given_name = response.data.given_name;
-//     userData.picture = response.data.picture;
-//   } catch (error) {
-//     console.error(error);
-//   }
-
-//   return userData;
-// };
 
 const NavBar = () => {
   const [user, setUser] = useState("User");
@@ -36,27 +10,12 @@ const NavBar = () => {
 
   const [sign, setSign] = useState(false);
 
-  // const [userData, setUserData] = useState({given_name: "User",
-  // picture: "",})
-
   useEffect(() => {
-    // const fetchData = async () => {
-    //   const data = await checkIndexed();
-    //   setUser(data.given_name);
-    //   setPicture(data.picture);
-    if (localStorage.getItem('user')!== undefined){
-      // setSign(true);
-      setUser(localStorage.getItem('user'))
-      setPicture(localStorage.getItem('picture'))
+    if (localStorage.getItem("user") !== undefined) {
+      setUser(localStorage.getItem("user"));
+      setPicture(localStorage.getItem("picture"));
     }
-    //   console.log(picture);
-    // };
-
-    // fetchData();
   }, []);
-
-  // const [openMenu, setOpenMenu] = useState(false)
-  // const [User, setUser] = useState("User")
 
   const navItems = [
     {
@@ -87,10 +46,6 @@ const NavBar = () => {
         }}
         displayGutters
       >
-        {/* <img src={search} about="search" style={{cursor: "pointer"}} /> */}
-        {/* <IconButton color="inherit" aria-label="Menu"> */}
-        {/* <MenuIcon /> */}
-        {/* </IconButton> */}
         <Link underline="none" href="a">
           <Typography
             sx={{
@@ -178,7 +133,6 @@ const NavBar = () => {
               {user}
             </Typography>
           </Box>
-          {/* <img src={picture} alt="" style={{ cursor: "pointer" }} /> */}
         </Box>
       </Container>
     </AppBar>

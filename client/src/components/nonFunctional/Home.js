@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
-import axios from 'axios'
 
 import NavBar from "./NavBar";
 
@@ -9,28 +8,8 @@ import bgimg from "../../assets/bg.jpg";
 import IndexData from "../IndexData";
 import SearchBar from "../Search";
 
-// const checkIndexed = async()=>{
-//   console.log("Checking")
-//   var indexed = false;
-//   const user = localStorage.getItem("user")
-//   // console.log(localStorage.getItem("indexed"))
-      
-//   axios.get("http://localhost:3001/user", {
-//   params: { email: user }, // Assuming user.email is the email you want to send as a query parameter
-//   }).then((res)=>{
-//       console.log(res)
-//       indexed = res.data.indexed
-//       localStorage.setItem('indexed', indexed)
-//       }).catch((err)=>{console.log(err)});
-  
-  
-//   return indexed
-// }
-
 const Home = (props) => {
-  // const [pr,setPr] = useState(null)
   const { user, setFiles } = props;
-
 
   return (
     <>
@@ -58,7 +37,7 @@ const Home = (props) => {
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-            transition: "opacity 0.3s ease-in-out"
+            transition: "opacity 0.3s ease-in-out",
           }}
         >
           <NavBar />
@@ -79,24 +58,26 @@ const Home = (props) => {
             Dashboard
           </Typography>
         </Box>
-        <Container sx={{
+        <Container
+          sx={{
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
             transition: "opacity 0.3s ease-in-out",
-          }} >
-        <IndexData />
+          }}
+        >
+          <IndexData />
         </Container>
-        <Container sx={{
+        <Container
+          sx={{
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
             transition: "opacity 0.3s ease-in-out",
-          }}>
-            <SearchBar setFiles={setFiles}/> 
-
+          }}
+        >
+          <SearchBar setFiles={setFiles} />
         </Container>
-
       </Container>
     </>
   );
