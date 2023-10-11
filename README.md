@@ -2,10 +2,8 @@
 Image search on google drive
 
 ### To run the client
-    cd client
-    
+    ```cd client```
     npm install
-    
     npm start
 This should start the react frontend at localhost 3000
 
