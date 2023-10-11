@@ -2,9 +2,9 @@
 Image search on google drive
 
 ### To run the client
-```cd client```
-```npm install ```
-```npm start```
+   cd client
+   npm install
+   npm start
 This should start the react frontend at localhost 3000
 
 ### To run the Node.js backed
