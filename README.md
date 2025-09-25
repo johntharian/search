@@ -1,5 +1,5 @@
 # search
-Image search on google drive
+Semantic search on Google Drive. Search the way you remember things
 
 ### To run the client
     cd client
