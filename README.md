@@ -125,7 +125,7 @@ The FastAPI server will run on `http://localhost:8000`
    - **Python Backend**:
      - FastAPI for high-performance API endpoints
      - CLIP or similar models for image-text similarity
-     - FAISS for efficient image similarity search
+     - Pinecone for efficient image similarity search
 
 3. **Image Processing Pipeline**:
    - Scans Google Drive for image files (JPG, PNG, etc.)
@@ -159,7 +159,7 @@ The FastAPI server will run on `http://localhost:8000`
 
 - **Frontend**: React, Material-UI, React Router
 - **Node.js Backend**: Express, Mongoose, Google Drive API
-- **Python Backend**: FastAPI, CLIP/OpenAI CLIP, FAISS
+- **Python Backend**: FastAPI, CLIP/OpenAI CLIP, Pinecone
 - **Database**: MongoDB
 - **Authentication**: Google OAuth 2.0
 
